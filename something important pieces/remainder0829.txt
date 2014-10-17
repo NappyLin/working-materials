@@ -1,0 +1,7 @@
+1.promise用法，能不能返回数组对象之类的 ----done
+2.use case
+完整性，完成fullfiled
+3.launch（）改为open（）  ----done
+4.downloadID改为id    -----done
+5.增加getDownloadsByStatus（）----done
+6.每个函数适当增加callback函数！！

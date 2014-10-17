@@ -1,0 +1,56 @@
+0714:
+1.ubuntu vpn
+
+0715:
+1.c/c++ develop environment
+code::Blocks+ wxWidgets
+
+install steps:(for learning and reusing)
+(1)c /c++ /boost libraries
+(2) Valgrind (for detectin the memory leak)
+(3)install gdb
+(4)add the software update source
+(5)install public key
+(6)code::Blocks newest version 
+wxWidgets
+
+
+2.get the chromium code!!!
+steps:
+(1) install the depot_tools!!
+you must use git! so you must install the git
+//sudo apt-get install git
+when install done,fetch depot_tools,which includes gclient,gcl,git-cl,repo and others.
+when you want to learn how to use git,you can type the command as follows
+//sudo git help -a
+//sudo git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+
+add depot_tools to your PATH:
+//sudo export PATH='pwd'/depot_tools:"$PATH"
+the command export is for setting the environment!
+(2)initial checkout!
+install the git!and the git-svn
+//sudo apt-get install git-svn
+tell the git about yourself using setting some info!
+// git config --global user.name "MyName" [for me,LinDandan]
+// git config --global user.email "MyEmail" [for me,dandan.lin@intel.com]
+// git config --global core.sutocrlf false
+// git config --global core.filemode false
+// git config --global branch.autosetuprebase always
+(3)Actual checkout
+fetch the tools in depot_tools!and create a new folder named src
+if not using git-svn,type the command as follows
+//fetch --nohooks chromium --nosvn=True
+else type the command as follows
+//fetch --nohooks chromium
+then do next!
+//cd src
+//git checkout master
+
+if you are building for Linux only:
+//build/install-build-deps.sh
+if you are building for Android also:
+//build/install-build-deps-android.sh
+
+then do next!
+//gclient sync --nobooks
